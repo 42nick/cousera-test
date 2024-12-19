@@ -2,84 +2,132 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Layout</title>
+    <title>Our Menu</title>
     <style>
         /********** Base styles **********/
-        * {
+        /* * {
             box-sizing: border-box;
+        } */
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: left;
+            background-color: #ededed00;
         }
 
-        h1 {
-            margin-bottom: 15px;
-        }
-
-        p {
-            border: 1px solid black;
-            background-color: #A52A2A;
-            width: 90%;
-            height: 150px;
+        .menu-container {
+            margin-top: 20px;
             margin-right: auto;
             margin-left: auto;
-            font-family: Helvetica;
-            color: white;
-        }
-
-        /* Simple Responsive Framework. */
-        .row {
             width: 100%;
         }
+
+        .menu-x {
+            margin: 5px;
+            position: relative;
+            background-color: #b7bfc0b5;
+            border: 1px solid black;
+            min-height: 160px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        .menu-x-title {
+            align-self: center;
+            width: 36%;
+            background-color: #b7bfc05f;
+            padding: 10px;
+            border: 1px solid black;
+            top: -1px;
+            right: -1px;
+            position: absolute;
+            height: 20px;
+            text-align: center;
+            white-space: nowrap;
+            /* Hide overflow text */
+            overflow: hidden;
+            /* Add ellipsis for overflow text */
+            text-overflow: ellipsis;
+        }
+
+        .menu-x-text {
+            margin-top: 40px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
 
         /********** Large devices only **********/
         @media (min-width: 992px) {
             .col-lg-1 {
                 float: left;
-                border: 1px solid green;
+                width: 30.33%;
+                align-self: center;
+                min-height: 290px;
             }
-
-            .col-lg-1 {
-                width: 33.33%;
-            }
-
         }
 
         /********** Medium devices only **********/
-        @media (min-width: 768px) and (max-width: 991px) {
+        @media (min-width: 768px) and (max-width: 992px) {
 
             .col-md-1,
             .col-md-2 {
                 float: left;
-                border: 1px solid green;
+                min-height: 220px;
             }
 
             .col-md-1 {
-                width: 50%;
+                width: 48%;
             }
 
             .col-md-2 {
-                width: 100%;
+                width: 98%;
+            }
+
+            .col-md-3 {
+                width: 18%;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>Responsive Layout</h1>
+    <h1 style="text-align: center;">Our Menu</h1>
 
-    <div class="row">
-        <div class="col-lg-1 col-md-1" ">
-            <p>Item 1</p>
+    <div class="menu-container">
+        <div class="menu-x col-lg-1 col-md-1">
+            <div class="menu-x-title" style="background-color: #ff6347;">
+                Tomato Tango
+            </div>
+            <div class="menu-x-text">
+                This Tomato Tango bowl is a dance of flavors. Fresh tomatoes, basil, and a hint of garlic make it a
+                must-try! The tomatoes are sourced from local farms, ensuring the freshest taste. The basil adds a
+                fragrant touch, while the garlic gives it a subtle kick. Perfect for a light lunch or a side dish.
+            </div>
+        </div>
+        <div class="menu-x col-lg-1 col-md-1">
+            <div class="menu-x-title" style="background-color: #ffa500;">
+                Carrot Craze
+            </div>
+            <div class="menu-x-text">
+                Our Carrot Craze bowl is a crunchy delight. Packed with fresh carrots, a sprinkle of nuts, and a zesty
+                dressing! The carrots are julienned to perfection, providing a satisfying crunch in every bite. The nuts
+                add a layer of texture and richness, while the dressing ties everything together with a tangy finish.
+                Ideal for a healthy snack or a vibrant side.
+            </div>
+        </div>
+        <div class="menu-x col-lg-1 col-md-2">
+            <div class="menu-x-title col-md-3" style="background-color: #98fb98;">
+                Pea Party
+            </div>
+            <div class="menu-x-text">
+                Join the Pea Party with this bowl! Fresh peas, mint, and a touch of lemon make it a refreshing choice.
+                The peas are blanched to retain their bright green color and sweet flavor. The mint adds a cool,
+                refreshing note, while the lemon juice provides a burst of acidity. This bowl is perfect for a light,
+                refreshing meal or as a side to complement any main dish.
+            </div>
         </div>
     </div>
-    <div class=" col-lg-1 col-md-1">
-            <p>Item 2</p>
-        </div>
-        <div class="col-lg-1 col-md-2">
-            <p>Item 3</p>
-        </div>
-    </div>
-
 </body>
 
 </html>
